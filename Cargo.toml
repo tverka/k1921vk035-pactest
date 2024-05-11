@@ -1,0 +1,19 @@
+[package]
+name = "k1921vk035-pactest"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cortex-m = {version = "0.7.6", features = ["critical-section-single-core"]}
+cortex-m-rt = "0.7.4"
+k1921vk035-pac = { version = "0.1.0", features = ["rt", "critical-section"]}
+panic-halt = "0.2.0"
+critical-section = { version = "1.0", optional = true }
+
+[features]
+rt = ["cortex-m-rt/device"]
+
+
+
